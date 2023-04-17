@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            #top{
+                background-color: #9B6E23;
+                width: 300px;
+                height: 30px; /*太短 再用overflow處理*/
+                overflow: auto; /*hidden把超出的文字隱藏掉
+                auto 卷軸 */
+
+                margin: 20px;
+                padding: 20px;
+                border: 5px solid #EBB471; /*邊框 固體*/
+
+            }
+            #bottom{
+                box-sizing: border-box;
+                background-color: #D7B98E;
+                width: 300px;
+                margin: 20px;
+                padding: 20px;
+                border: 5px solid #B68E55; /*邊框 固體*/
+            }
+
+            blockquote{
+                /**/
+                background-color: #D7B98E;
+                padding-top: 2em; /*padding填充 2個高度 相對距離 以我現在文字大小來設*/
+                padding:10px 6px 4px 6px; /*上 右 下 左*/ 
+
+                padding: 2em 4em; /*上下 左右*/
+            }  
+            #border{
+
+                width: 200px;
+                height: 100px;
+                background-color: #E98B2A;
+                border-top-right-radius: 2em;
+                
+                border-top-left-radius: 1em;
+                border-bottom-left-radius: 1em;
+                border-bottom-right-radius: 2em;
+                padding:1em;
+                
+            }
+
+        
+
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <p id="top">Lorem ipsum dolor sit, amet consectetur adipisicing elit. At reiciendis excepturi possimus nobis earum vero quaerat similique veniam veritatis aspernatur ipsum adipisci doloribus autem labore nisi, pariatur, architecto sint cupiditate.
+        <p id="bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sapiente, tenetur veritatis quod doloremque iusto repellat, iste architecto excepturi officia incidunt quae accusamus quos, vero consequuntur neque optio. Officiis, ut?
+        <blockquote>
+            <p id="border">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro voluptates hic ipsa. Eum odio veritatis harum officiis praesentium perspiciatis aut soluta deserunt tempora aspernatur reprehenderit autem possimus, minima saepe sunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eum odio nihil distinctio mollitia est, explicabo, culpa, molestias necessitatibus ipsam quisquam reprehenderit laudantium ea neque amet commodi dignissimos. Vero, dolore?</p>
+        </blockquote>
+            <script src="" async defer></script>
+    </body>
+</html>

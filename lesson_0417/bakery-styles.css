@@ -1,0 +1,142 @@
+/*外部的css 是external*/
+
+@charset "UTF-8";
+
+html{
+    box-sizing: border-box;  /*繼承父類別*/
+}
+*{   /*所有元素*/
+    box-sizing: inherit;
+    
+}
+body {
+    font-family: Georgia, serif;
+    font-size: 100%;
+    background-color:#CA7853;
+    margin: 0px;
+}
+
+
+/* link styles */
+a{
+    text-decoration: none;
+    border-bottom: 2px dotted;
+    padding-bottom: .05em; /*把底線位置上移*/
+
+}
+a:link,
+a:visited {
+    color: #DC6903;
+}
+
+a:focus,
+a:hover,
+a:active {
+    color: #F9AB33;
+}
+
+
+/* header styles */
+header {
+    color: white;
+    background: url(images/croissants_banner.jpg) no-repeat center center; /*上下置中 左右置中*/
+    background-size:cover;
+    text-align: center;
+    height: 15em;
+}
+
+header p {
+    font-style: italic;
+    font-size: 1.2em;
+    margin-top: -12px;  /*負的往上移*/
+}
+
+header h1{
+    margin-top: 1.5em;
+}
+
+/* nav styles */
+nav,
+footer {
+    font-family: verdana, sans-serif;
+    background-color: #783F27;
+}
+nav ul{
+    margin:0;
+}
+nav ul li a:link,
+nav ul li a:visited {
+    color: #F9AB33;
+}
+
+nav ul li a:focus,
+nav ul li a:hover,
+nav ul li a:active {
+    color: #fff;
+}
+
+nav ul li {
+    font-size: .8em;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+/* main "products" styles */
+main {
+    font-family: 'Stint Ultra Expanded', cursive;
+    background-color: white;
+    line-height: 1.8em;
+    color: #555;
+    padding:1em; /*邊邊給他點距離*/
+    margin: 2.5%;
+}
+
+main img{  /*後代選取器*/
+    float: left;
+    margin: 0 1em 1em 0; /*上 右 下 左*/
+
+}
+
+h3 {
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    color: #7A0002;
+    border-top:1px solid;
+    border-left: 1px solid;
+    padding-left: 1em; /*border裡的距離叫padding  1em一個字的距離*/
+    margin-top: 2.5em;
+}
+
+p.more {
+    font-family: verdana, sans-serif;
+    text-transform: uppercase;
+    font-size: .8em;
+}
+
+/* aside "hours" styles */
+aside {  /*邊邊*/
+    background: url(images/scallop.png) repeat-y left top;
+    background-color:#DB8E71;
+    padding: 1em;
+    padding-left: 45px;
+    border-top-right-radius: 25px;
+}
+
+/* misc styles */
+footer {
+    color: #EADDC4;
+    text-align: center;
+    font-size: .8em;
+    padding:1em;
+}
+
+h2 {
+    font-family: 'Stint Ultra Expanded', cursive;
+}
+
+.day {
+    color: #783F27;
+    font-family: verdana, sans-serif;
+    font-size: .8em;
+    text-transform: uppercase;
+}
