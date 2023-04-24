@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Bootstrap Example</title>
+    <style>
+        body {
+            margin: 2em 10% 2em 10%;
+            /*上右下左*/
+        }
+
+        header ul {
+            display: flex;/*原本在下面 流到旁邊*/
+            
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            /*中間距離*/
+            border-bottom: solid #bebabe 2px;
+            /*底線*/
+            padding-bottom: 1.5em;
+            /*底線距離*/
+            align-items: center;
+            padding-left: 0;
+
+        }
+
+        ul li a {
+            display: block;
+            padding: 0.5em;
+            /*把menu間距隔開*/
+            font-weight: bold;
+            color: #bba8bb;
+        }
+
+        a.active {
+            /*a元素 logo裡的樣式*/
+            color: white;
+            background-color: #bba8bb;
+            border-radius: 0.4em;
+            /*圓角*/
+        }
+
+        ul li a:link {
+            text-decoration: none;
+            /*取消底線*/
+
+        }
+
+        ul {
+            /*list*/
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        #logo {
+            margin-right: auto;
+        }
+
+        section#banner {
+            box-sizing: border-box;
+            background-color: #facc77f1;
+            margin:1em auto; /*1em離上面位置|置中 先設width再auto 才有效果*/
+            width: 75%;
+        }
+
+        section#banner h3{
+            font-size: 2em;
+            text-align: center;
+            color: aliceblue;
+        }
+
+        section#banner p{
+            font-size: 1.2em;
+            text-align: center;
+            line-height: 1.5em;
+            color: #f1edf1;
+        }
+        section#banner div{
+            text-align: center;
+
+        }
+
+        /*偽元素 讓新增的元素也可以操控樣式和效果 
+        創建之前得先有一個真正的元素(div)*/
+        section#banner div::after{
+            content: " ";
+            display: block;
+            clear: both;
+
+        }
+        
+        section#banner div a{
+            display: inline-block; /*inline可以依順序連在一起 block 可以設寬*/
+            padding: 1em 1.5em; /*上下 左右*/
+            width: 5em;
+            background-color: #bebabe;
+            text-align: center;
+            font-weight: bolder;
+            color: #f1edf1;
+            border-radius: .8em;
+            float: none; /*設定區塊浮動*/
+
+        }
+        section#banner div a:link{
+            text-decoration: none;
+
+        }
+        /*滑鼠碰在上面的效果*/
+        section#banner div a:hover{
+            color: bisque;
+
+        }
+
+        main{
+            margin: 1em auto; /*上下 左右*/
+
+        }
+        main h3{
+            font-size: 1.5em;
+            color: #6b675d;
+            border-bottom: #473d3d solid 1px; /*底線*/
+            padding-bottom: 1em;
+
+        }
+        main div#icons{
+            display: flex; /*流到旁邊*/
+            flex-direction: row;
+            flex-wrap: nowrap;/*把超過100%的元素換行*/
+        }
+        main div#icons section{
+            box-sizing: border-box;
+            /*border: solid 1px #c47f7f;*/
+            flex: 1 1 auto;/*0關閉 1開啟 把剩餘空間占滿*/
+            padding: 1em;
+            overflow: hidden;
+            text-align: center;
+        }
+        main h4{
+            font-size: 1.5em;
+        }
+        footer{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            align-items: center; 
+            margin-top: 2em;
+            
+
+        }
+        footer #copyright{
+            margin-right: 2em; /*左移*/
+            font-size: small;
+        }
+        footer #copyright ~p{ /*鄰居選取氣 是鄰居的都套用*/
+            flex: 0 1 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--<div>Logo</div>-->
+    <header><ul>
+        <li id="logo"><img src="images/logo.png" alt="logo"></li>
+        <li><a href="#" class="active">Home</a></li> <!--滑鼠按下的樣式-->
+        <li><a href="#">Feature</a></li>
+        <li><a href="#">Price</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">About</a></li>
+
+    </ul></header>
+
+    
+   
+
+    </header>
+    <section id="banner">
+        <h3>
+            Centered hero
+        </h3>
+        <p>
+            Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular
+            front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive
+            prebuilt components, and powerful JavaScript plugins.
+        </p>
+        <div> <!--Buttom-->
+           <a href="#">Primary</a>
+            <a href="#">Secondary</a> 
+        </div>
+        
+    </section>
+    <main>
+        <h3>Columns with icons</h3>
+        <div id="icons">
+            <section>
+                <img src="images/Icon1.png" alt="icon1">
+                <h4>Tinder</h4>
+                <p>With 55 billion matches to date, Tinder® is the world's most popular dating app, making it the place to meet new people.</p>
+                <p><a href="#">Call to action></a></p>
+            </section>
+            
+            <section>
+                <img src="images/Icon2.png" alt="icon1">
+                <h4>Tiktok</h4>
+                <p>handsome thai boys · 1.5B views · Discover videos related to handsome thai boys on TikTok.</p>
+                <p><a href="#">Call to action></a></p>
+            </section>
+            
+            <section>
+                <img src="images/Icon3.png" alt="icon1">
+                <h4>Reddit</h4>
+                <p>Reddit is a network of communities where people can dive into their interests.</p>
+                <p><a href="#">Call to action></a></p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p id="copyright">© 2023 ChuchuCompany, Inc</p>
+        <p><a href="#"><img src="images/home.png" alt="icon4" width="20"></a></p>
+        <p><a href="#"><img src="images/bell.png" alt=""></a></p>
+        <p><a href="#"><img src="images/mail.png" alt=""></a></p>
+    </footer>
+   
+
+</body>
+
+</html>
