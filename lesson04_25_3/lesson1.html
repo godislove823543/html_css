@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Response Web Design(RWD)</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        /*手機*/
+        #container {
+            display: grid;
+            grid-template-columns:1fr;
+            grid-template-rows: auto 15em 60em 15em 5em;
+
+            grid-template-areas:
+                "header "
+                "aside "
+                "main"
+                "links"
+                "footer"
+            ;
+        }
+
+        header {
+            grid-area: header;
+            background-color: rgb(238, 221, 228);
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: rgb(121, 154, 167);
+        }
+
+        main {
+            grid-area: main;
+            background-color: rgb(234, 241, 195);
+        }
+
+        section {
+            grid-area: links;
+            background-color: aquamarine;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: rgb(122, 103, 122);
+        }
+
+        /*header-layout*/
+        header{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            /*align-items: center;*/
+        }
+
+        header ul{
+            margin: 1em 0;
+            padding: 0;
+            list-style-type: none; /*項目符號*/
+            display: flex;
+            flex-direction: row; /*變成橫的*/
+            flex-wrap: nowrap;
+            justify-content: space-around;
+        }
+
+        header li a{
+            display: block;
+            background-color: rgb(238, 194, 194);
+            color: aliceblue;
+            border-radius: 0.3em;
+            padding: .3em;
+            margin: 0 0.2em;
+        }
+
+        header li a:link{ /*裡面的連結#*/
+            text-decoration: none; /*沒底線*/
+        }
+
+
+
+        @media (min-width: 768px) {
+
+            /*平板和筆電*/
+            #container {
+                display: grid;
+                /*columns欄:直的*/
+                grid-template-columns: 20em 1fr;
+                grid-template-rows: auto 70em  15em 5em; /*以裡面內容高度為主*/
+
+                grid-template-areas:
+                    "header header header"
+                    "aside main links"
+                    
+                    "footer footer footer"
+                ;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            /*平板和筆電*/
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <img src="images/logo.png" alt="logo" >
+            <nav> <!--導覽列-->
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#" class="">Feature</a></li>
+                    <li><a href="#" class="">Price</a></li>
+                    <li><a href="#" class="">FAQ</a></li>
+                    <li><a href="#" class="">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <aside>
+            <h1>Aside</h1>
+        </aside>
+
+        <main>
+            <h1>Main</h1>
+        </main>
+
+        <section>
+            <h1>Links</h1>
+        </section>
+
+        <footer>
+            <h1>footer</h1>
+        </footer>
+
+        <script src="" async defer></script>
+</body>
+
+</html>
