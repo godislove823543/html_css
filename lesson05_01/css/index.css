@@ -23,6 +23,9 @@ body{
         margin-left: auto; /*置中*/
         margin-right: auto;
     }
+    #cards section{
+      flex: 1 1 50%;
+  }
     
  }
 
@@ -31,8 +34,22 @@ body{
     #root{
         max-width:960px;
     }
+    #cards section{
+      flex: 1 1 33%;
+  }
    
  }
+ /* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+   #root{
+       max-width:1140px;
+   }
+   #cards section{
+       flex: 1 1 33%;
+   }
+}
+
+
 
  #layout{
     display:grid;
@@ -88,20 +105,4 @@ body{
  header img{
     display: block;
     margin: 1em auto 2em; /*上 左右 下*/
- }
-/* X-Large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) { 
-    #root{
-        max-width:1140px;
-    }
-    #cards section{
-        flex: 1 1 33%;
-    }
- }
-
-/* XX-Large devices (larger desktops, 1400px and up)*/
-@media (min-width: 1400px) { 
-    #root{
-        max-width:1320px;
-    }
  }
