@@ -8,15 +8,16 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>youBike2.0</title>
+    <title>Scarlett</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css"> <!--自己寫的在後面-->
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<body><!--去bootstrap/navbar/copy-->
+    <div id="root"> <!--跟容器 包含所有內容-->
+    <nav class="navbar navbar-expand-md bg-body-tertiary"> <!--把lg改成md(平板)-->
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Scarlett's Page</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -25,7 +26,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav mS-auto mb-2 mb-lg-0"> <!--ms-auto元素居右 me-auto元素居左-->
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
@@ -44,10 +45,61 @@
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
+
             </div>
         </div>
     </nav>
 
+    <div id="layout">
+  <header>
+        <h2>我的姓名 <br>我的年齡 <br>我的經歷</h2>
+        <picture>
+            <!--用上面的(768)-->
+            
+            <source media="(min-width: 1200px)" srcset="images/小楚.png" width="200">
+            <source media="(min-width: 992px)" srcset="images/小楚.png" width="150">
+            <source media="(min-width: 768px)" srcset="images/小楚.png" width="100">  <!--平板-->
+            <source media="(min-width: 576px)" srcset="images/小楚.png"> <!--手機橫的-->
+            <img src="images/小楚.png " width="70" height="70" alt="我的姓名">
+        </picture>
+        
+    </header>
+    <main>
+        <div id="cards">
+            <section class="s1">
+                <h1>1</h1>
+            </section>
+            <section class="s2">
+                <h1>2</h1>
+            </section>
+            <section class="s1">
+                <h1>3</h1>
+            </section>
+            <section class="s2">
+                <h1>4</h1>
+            </section>
+            <section class="s1">
+                <h1>5</h1>
+            </section>
+            <section class="s2">
+                <h1>6</h1>
+            </section>
+            <section class="s1">
+                <h1>7</h1>
+            </section>
+            <section class="s2">
+                <h1>8</h1>
+            </section>
+            <section class="s1">
+                <h1>9</h1>
+            </section>
+    </div>
+    </main>
+    <footer>
+        footer
+    </footer>
+    </div>
+</div>
 
     <script src="js/bootstrap.min.js">
 

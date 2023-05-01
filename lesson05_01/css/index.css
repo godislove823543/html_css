@@ -1,0 +1,107 @@
+body{
+    background-color: rgb(229, 220, 230);
+}
+
+/*設定root固定寬度*/
+#root{
+    width:100%;
+    margin-left: auto; /*置中 全部套用*/
+    margin-right: auto;
+}
+
+@media (min-width: 576px) { 
+    #root{
+        width:100%;
+     
+    }
+}
+
+
+@media (min-width: 768px) { 
+    #root{
+        max-width:720px; /*最大只能720px 這樣就會有768-720的留白*/
+        margin-left: auto; /*置中*/
+        margin-right: auto;
+    }
+    
+ }
+
+
+@media (min-width: 992px) { 
+    #root{
+        max-width:960px;
+    }
+   
+ }
+
+ #layout{
+    display:grid;
+    grid-template-columns: 1fr; /*fractional 部分的*/
+    grid-template-rows: auto auto 200px; /*設auto才不會卡內容*/
+    grid-template-areas: 
+    "header"
+    "content"
+    "footer"
+ }
+
+ #layout header{
+    grid-area: header;
+    background-color: rgba(212, 200, 200, 0.685);
+ }
+ #layout main{
+    grid-area: content;
+    background-color: rgb(189, 156, 156);
+ }
+ #layout footer{
+    grid-area: footer;
+    background-color: rgb(165, 199, 199);
+ }
+ #cards{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap; 
+ }
+ #cards section{ /*設定總部*/
+    flex:0 1 100%;
+    /*height: 100px;*/
+    border: 2px chocolate solid;
+
+ }
+ #cards section.s1{
+    background-color: #e6d7b7;
+ }
+ #cards section.s2{
+    background-color: rgb(121, 119, 117);
+ }
+ #cards h1{
+    text-align: center; 
+    margin: 2em 0em ;
+ }
+ header h2{
+    font-size: 2em;
+    text-align: center;
+    line-height: 1.5em; /*航高*/
+    color: grey;
+    margin-top: 2em; /*上面的距離*/
+    
+ }
+ header img{
+    display: block;
+    margin: 1em auto 2em; /*上 左右 下*/
+ }
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+    #root{
+        max-width:1140px;
+    }
+    #cards section{
+        flex: 1 1 33%;
+    }
+ }
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) { 
+    #root{
+        max-width:1320px;
+    }
+ }
